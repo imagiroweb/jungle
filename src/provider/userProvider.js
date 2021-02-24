@@ -6,7 +6,6 @@ export const UserContext = createContext({ user: null });
 
 const UserProvider = ({children}) => {
     const [user, setUser] = useState(null);
-    console.log("UserProvider -> user", user)
 
     useEffect(() => {
         auth.onAuthStateChanged(async (userAuth) => {

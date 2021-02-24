@@ -8,7 +8,6 @@ const SignIn = () => {
     const [password, setPassword] = useState("");
     const [error, setError] = useState(null);
     const history = useHistory();
-    console.log("SignIn -> error", error)
     
     const handleSubmit = (event, email, password) => {
         event.preventDefault();
@@ -32,6 +31,9 @@ const SignIn = () => {
             <p>Vous n'avez pas encore de compte ? <Link to="/signup">Créez votre compte</Link></p>
             <p>Vous avez oublié votre mot de pass ? <Link to='/resetPassword'>renvoyer un mot de pass</Link></p>
             <p>ou alors : <Link to="/recettes">créez votre recette</Link></p>
+            {error && 
+                <p>{error}</p>
+            }
         </>
     )
 }

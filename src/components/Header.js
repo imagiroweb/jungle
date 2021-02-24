@@ -21,10 +21,11 @@ const Header = () => {
     return (
         <header>
             <div>
-                <span>Bonjour {user.displayName}</span>
+                <span>Bonjour {user?.displayName}</span>
                 <nav>
                     <Link to='/recettes'>recettes</Link>
                     <Link to="/welcome">home</Link>
+                    <Link to='/profil'>Profil</Link>
                     <Link to="/resetPassword">password</Link>
                     <span onClick={handleLogout}>logout</span>
                 </nav>

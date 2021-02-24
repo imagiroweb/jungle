@@ -5,8 +5,10 @@ import { UserContext } from '../provider/userProvider';
 
 const FormRecette = () => {
   const {user} = useContext(UserContext);
+  console.log("FormRecette -> user", user)
     const [title, setTitle] = useState('');
     const [author, setAuthor] = useState(user.displayName);
+    console.log("FormRecette -> author", author)
 
     const addRecette = (event) => {
         event.preventDefault();
@@ -30,7 +32,6 @@ const FormRecette = () => {
         />
         <input
           type='text'
-          placeholder="auteur de la recette"
           name="author"
           onChange={(event) => handleChange(event, setAuthor)}
           value={author}

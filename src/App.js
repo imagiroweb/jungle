@@ -12,7 +12,6 @@ import Header from './components/Header';
 
 function App() {
   const user = useContext(UserContext);
-  console.log("App -> user", user)
 
   return (
     <Router>
